@@ -1,4 +1,6 @@
-<?php include 'config.php'?>
+<?php include 'config.php';
+    session_start();
+?>
 <?php
 if(isset($_POST['btn-submit'])){
     $email = $_POST['email'];
@@ -10,6 +12,7 @@ if(isset($_POST['btn-submit'])){
     $row = mysqli_num_rows($result);
 
     if($row > 0){
+        $_SESSION['email'] = $email;
         header('location: admin_dashboard.php');
     }else{
         $err = "Email or Password does not match";

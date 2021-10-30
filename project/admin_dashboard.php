@@ -1,4 +1,4 @@
-
+<?php include 'session.php'?>
 <?php include 'admin_header.php'?>
 
 <!-- Main Content -->
